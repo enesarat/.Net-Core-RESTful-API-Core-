@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RZHhFB7WP7TBqmeWl85ZSS+z5pSCmkHcsaPjMzFnLWC5EC3a9G6JpPxBD/eMcGcwj/wmYzipKQiJ/XISxvCxTw==",
+  "dgSpecHash": "SRvFYVzylb3QLgoGEykI8VitguFutqUoGUR8yn88U0I6oYHyxpm++0lUgLHC8LmUt4YZNcx7ruroc/StT7auHw==",
   "success": true,
   "projectFilePath": "C:\\Users\\enes.arat\\source\\repos\\AgentService\\AgentService.API\\AgentService.API.csproj",
   "expectedPackageFiles": [
@@ -12,11 +12,14 @@
     "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.0\\microsoft.entityframeworkcore.analyzers.5.0.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.0\\microsoft.entityframeworkcore.relational.5.0.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.0\\microsoft.entityframeworkcore.sqlserver.5.0.0.nupkg.sha512",
+    "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.0\\microsoft.extensions.fileproviders.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.extensions.fileproviders.embedded\\3.1.0\\microsoft.extensions.fileproviders.embedded.3.1.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
@@ -31,9 +34,18 @@
     "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\enes.arat\\.nuget\\packages\\namotion.reflection\\2.0.10\\namotion.reflection.2.0.10.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\enes.arat\\.nuget\\packages\\njsonschema\\10.6.10\\njsonschema.10.6.10.nupkg.sha512",
+    "C:\\Users\\enes.arat\\.nuget\\packages\\njsonschema.yaml\\10.6.10\\njsonschema.yaml.10.6.10.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\nlog\\4.7.11\\nlog.4.7.11.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\nlog.extensions.logging\\1.7.4\\nlog.extensions.logging.1.7.4.nupkg.sha512",
+    "C:\\Users\\enes.arat\\.nuget\\packages\\nswag.annotations\\13.15.10\\nswag.annotations.13.15.10.nupkg.sha512",
+    "C:\\Users\\enes.arat\\.nuget\\packages\\nswag.aspnetcore\\13.15.10\\nswag.aspnetcore.13.15.10.nupkg.sha512",
+    "C:\\Users\\enes.arat\\.nuget\\packages\\nswag.core\\13.15.10\\nswag.core.13.15.10.nupkg.sha512",
+    "C:\\Users\\enes.arat\\.nuget\\packages\\nswag.core.yaml\\13.15.10\\nswag.core.yaml.13.15.10.nupkg.sha512",
+    "C:\\Users\\enes.arat\\.nuget\\packages\\nswag.generation\\13.15.10\\nswag.generation.13.15.10.nupkg.sha512",
+    "C:\\Users\\enes.arat\\.nuget\\packages\\nswag.generation.aspnetcore\\13.15.10\\nswag.generation.aspnetcore.13.15.10.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
@@ -99,7 +111,8 @@
     "C:\\Users\\enes.arat\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\enes.arat\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\enes.arat\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\enes.arat\\.nuget\\packages\\yamldotnet\\11.2.1\\yamldotnet.11.2.1.nupkg.sha512"
   ],
   "logs": []
 }

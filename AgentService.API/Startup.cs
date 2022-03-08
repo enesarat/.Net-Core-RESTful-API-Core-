@@ -41,6 +41,19 @@ namespace AgentService.API
             services.AddControllers();
             services.AddSingleton<IAgentService, AgentManager>();
             services.AddSingleton<IAgentDAL, EfAgentRepository>();
+
+            services.AddSwaggerDocument(config=>{
+                config.PostProcess = (doc =>
+                {
+                    doc.Info.Title = "AgentsService API";
+                    doc.Info.Version = "1.0.0";
+                    doc.Info.Contact = new NSwag.OpenApiContact()
+                    {
+                        Url = "https://github.com/enesarat"
+                    };
+                });
+            });
+            
         }
 
         
@@ -69,6 +82,8 @@ namespace AgentService.API
 
             app.UseAuthorization();
 
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

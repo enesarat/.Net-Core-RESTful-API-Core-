@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AgentService.API</name>
+    </assembly>
+    <members>
+        <member name="M:AgentService.API.Controllers.AgentController.Get">
+            <summary>
+            Get all agents
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AgentService.API.Controllers.AgentController.GetAgentById(System.Int32)">
+            <summary>
+            Get agent by id property
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgentService.API.Controllers.AgentController.Post(EntityLayer.Agent)">
+            <summary>
+            Add agent
+            </summary>
+            <param name="agent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgentService.API.Controllers.AgentController.Put(EntityLayer.Agent)">
+            <summary>
+            Update the agent
+            </summary>
+            <param name="oldAgent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgentService.API.Controllers.AgentController.DeleteAgentById(System.Int32)">
+            <summary>
+            Delete the agent by id property
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

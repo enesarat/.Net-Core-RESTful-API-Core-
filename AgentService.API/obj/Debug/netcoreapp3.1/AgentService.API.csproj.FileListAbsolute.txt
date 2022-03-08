@@ -89,3 +89,15 @@ C:\Users\enes.arat\source\repos\AgentService\AgentService.API\bin\Debug\netcorea
 C:\Users\enes.arat\source\repos\AgentService\AgentService.API\bin\Debug\netcoreapp3.1\BusinessLayer.pdb
 C:\Users\enes.arat\source\repos\AgentService\AgentService.API\bin\Debug\netcoreapp3.1\EntityLayer.pdb
 C:\Users\enes.arat\source\repos\AgentService\AgentService.API\bin\Debug\netcoreapp3.1\DataAccessLayer.pdb
+C:\Users\enes.arat\source\repos\AgentService\AgentService.API\bin\Debug\netcoreapp3.1\Namotion.Reflection.dll
+C:\Users\enes.arat\source\repos\AgentService\AgentService.API\bin\Debug\netcoreapp3.1\NJsonSchema.dll
+C:\Users\enes.arat\source\repos\AgentService\AgentService.API\bin\Debug\netcoreapp3.1\NJsonSchema.Yaml.dll
+C:\Users\enes.arat\source\repos\AgentService\AgentService.API\bin\Debug\netcoreapp3.1\NSwag.Annotations.dll
+C:\Users\enes.arat\source\repos\AgentService\AgentService.API\bin\Debug\netcoreapp3.1\NSwag.AspNetCore.dll
+C:\Users\enes.arat\source\repos\AgentService\AgentService.API\bin\Debug\netcoreapp3.1\NSwag.Core.dll
+C:\Users\enes.arat\source\repos\AgentService\AgentService.API\bin\Debug\netcoreapp3.1\NSwag.Core.Yaml.dll
+C:\Users\enes.arat\source\repos\AgentService\AgentService.API\bin\Debug\netcoreapp3.1\NSwag.Generation.dll
+C:\Users\enes.arat\source\repos\AgentService\AgentService.API\bin\Debug\netcoreapp3.1\NSwag.Generation.AspNetCore.dll
+C:\Users\enes.arat\source\repos\AgentService\AgentService.API\bin\Debug\netcoreapp3.1\YamlDotNet.dll
+C:\Users\enes.arat\source\repos\AgentService\AgentService.API\obj\Debug\netcoreapp3.1\AgentService.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\enes.arat\source\repos\AgentService\AgentService.API\bin\Debug\netcoreapp3.1\AgentService.API.xml

@@ -22,14 +22,24 @@ namespace AgentService.API.Controllers
             this.manageAgent = agentService;
         }
 
+        /// <summary>
+        /// Get all agents
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Get()
         {
             return Ok(manageAgent.GetAllElement()); // 200 + retrieved data 
         }
         
-        [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        /// <summary>
+        /// Get agent by id property
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("[action]/{id}")]
+        public IActionResult GetAgentById(int id)
         {
             if (manageAgent.GetElementById(id)!=null)
             {
@@ -38,6 +48,11 @@ namespace AgentService.API.Controllers
             return NotFound(); // 404
         }
 
+        /// <summary>
+        /// Add agent
+        /// </summary>
+        /// <param name="agent"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Post([FromBody]Agent agent)
         {
@@ -49,6 +64,11 @@ namespace AgentService.API.Controllers
             return BadRequest(ModelState); // 400 + validation errors
         }
 
+        /// <summary>
+        /// Update the agent
+        /// </summary>
+        /// <param name="oldAgent"></param>
+        /// <returns></returns>
         [HttpPut]
         public IActionResult Put([FromBody]Agent oldAgent)
         {
@@ -59,8 +79,14 @@ namespace AgentService.API.Controllers
             return NotFound(); // 404 
         }
 
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        /// <summary>
+        /// Delete the agent by id property
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpDelete]
+        [Route("[action]/{id}")]
+        public IActionResult DeleteAgentById(int id)
         {
             if (manageAgent.GetElementById(id) != null)
             {

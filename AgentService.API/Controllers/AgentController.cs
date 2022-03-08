@@ -23,33 +23,51 @@ namespace AgentService.API.Controllers
         }
 
         [HttpGet]
-        public List<Agent> Get()
+        public IActionResult Get()
         {
-            return manageAgent.GetAllElement();
+            return Ok(manageAgent.GetAllElement()); // 200 + retrieved data 
         }
         
         [HttpGet("{id}")]
-        public Agent Get(int id)
+        public IActionResult Get(int id)
         {
-            return manageAgent.GetElementById(id);
+            if (manageAgent.GetElementById(id)!=null)
+            {
+                return Ok(manageAgent.GetElementById(id)); // 200 + retrieved data
+            }
+            return NotFound(); // 404
         }
 
         [HttpPost]
-        public Agent Post([FromBody]Agent newAgent)
+        public IActionResult Post([FromBody]Agent agent)
         {
-            return manageAgent.InsertElement(newAgent);
+            if (ModelState.IsValid)
+            {
+                var newAgent = manageAgent.InsertElement(agent);
+                return CreatedAtAction("Get", new { agentId = newAgent.AgentId }, newAgent); // 201 + data + header info for data location
+            }
+            return BadRequest(ModelState); // 400 + validation errors
         }
 
         [HttpPut]
-        public Agent Put([FromBody]Agent oldAgent)
+        public IActionResult Put([FromBody]Agent oldAgent)
         {
-            return manageAgent.UpdateElement(oldAgent);
+            if (manageAgent.GetElementById(oldAgent.AgentId)!=null)
+            {
+                return Ok(manageAgent.UpdateElement(oldAgent)); // 200 + data
+            }
+            return NotFound(); // 404 
         }
 
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
-            manageAgent.DeleteElement(id);
+            if (manageAgent.GetElementById(id) != null)
+            {
+                manageAgent.DeleteElement(id);
+                return Ok(); // 200
+            }
+            return NotFound(); // 404 
         }
     }
 }

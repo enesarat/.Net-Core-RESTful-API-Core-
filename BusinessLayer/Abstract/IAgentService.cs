@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BusinessLayer.Abstract
 {
-    public interface IAgentSevice:IGenericService<Agent>
+    public interface IAgentService:IGenericService<Agent>
     {
     }
 }

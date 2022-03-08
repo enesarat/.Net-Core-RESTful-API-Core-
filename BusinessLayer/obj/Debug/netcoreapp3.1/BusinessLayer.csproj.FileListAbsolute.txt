@@ -1,0 +1,15 @@
+C:\Users\enes.arat\source\repos\AgentService\BusinessLayer\bin\Debug\netcoreapp3.1\BusinessLayer.deps.json
+C:\Users\enes.arat\source\repos\AgentService\BusinessLayer\bin\Debug\netcoreapp3.1\BusinessLayer.dll
+C:\Users\enes.arat\source\repos\AgentService\BusinessLayer\bin\Debug\netcoreapp3.1\BusinessLayer.pdb
+C:\Users\enes.arat\source\repos\AgentService\BusinessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.dll
+C:\Users\enes.arat\source\repos\AgentService\BusinessLayer\bin\Debug\netcoreapp3.1\EntityLayer.dll
+C:\Users\enes.arat\source\repos\AgentService\BusinessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.pdb
+C:\Users\enes.arat\source\repos\AgentService\BusinessLayer\bin\Debug\netcoreapp3.1\EntityLayer.pdb
+C:\Users\enes.arat\source\repos\AgentService\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\enes.arat\source\repos\AgentService\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\enes.arat\source\repos\AgentService\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\enes.arat\source\repos\AgentService\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.AssemblyInfo.cs
+C:\Users\enes.arat\source\repos\AgentService\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\enes.arat\source\repos\AgentService\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.csproj.CopyComplete
+C:\Users\enes.arat\source\repos\AgentService\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.dll
+C:\Users\enes.arat\source\repos\AgentService\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.pdb

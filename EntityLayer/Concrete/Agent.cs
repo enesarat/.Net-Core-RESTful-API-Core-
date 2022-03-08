@@ -11,6 +11,8 @@ namespace EntityLayer
         public int AgentId { get; set; }
         [StringLength(50)]
         public string AgentName { get; set; }
+        [StringLength(50)]
+        public string AgentManagerName{ get; set; }
         [StringLength(150)]
         public string AgentAddress { get; set; }
     }

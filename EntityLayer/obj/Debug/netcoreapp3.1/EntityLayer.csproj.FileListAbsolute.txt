@@ -1,0 +1,10 @@
+C:\Users\enes.arat\source\repos\AgentService\EntityLayer\bin\Debug\netcoreapp3.1\EntityLayer.deps.json
+C:\Users\enes.arat\source\repos\AgentService\EntityLayer\bin\Debug\netcoreapp3.1\EntityLayer.dll
+C:\Users\enes.arat\source\repos\AgentService\EntityLayer\bin\Debug\netcoreapp3.1\EntityLayer.pdb
+C:\Users\enes.arat\source\repos\AgentService\EntityLayer\obj\Debug\netcoreapp3.1\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\enes.arat\source\repos\AgentService\EntityLayer\obj\Debug\netcoreapp3.1\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\enes.arat\source\repos\AgentService\EntityLayer\obj\Debug\netcoreapp3.1\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\enes.arat\source\repos\AgentService\EntityLayer\obj\Debug\netcoreapp3.1\EntityLayer.AssemblyInfo.cs
+C:\Users\enes.arat\source\repos\AgentService\EntityLayer\obj\Debug\netcoreapp3.1\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\enes.arat\source\repos\AgentService\EntityLayer\obj\Debug\netcoreapp3.1\EntityLayer.dll
+C:\Users\enes.arat\source\repos\AgentService\EntityLayer\obj\Debug\netcoreapp3.1\EntityLayer.pdb

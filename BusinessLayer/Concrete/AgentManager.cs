@@ -7,7 +7,7 @@ using System.Text;
 
 namespace BusinessLayer.Concrete
 {
-    public class AgentManager : IAgentSevice
+    public class AgentManager : IAgentService
     {
         IAgentDAL agentAccess;
         public AgentManager(IAgentDAL agentAccess)

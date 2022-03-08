@@ -1,4 +1,8 @@
 using AgentService.API.Extensions;
+using BusinessLayer.Abstract;
+using BusinessLayer.Concrete;
+using DataAccessLayer.Abstract;
+using DataAccessLayer.EntityFramwork;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -35,6 +39,8 @@ namespace AgentService.API
             services.ConfigureLoggerService();
 
             services.AddControllers();
+            services.AddSingleton<IAgentService, AgentManager>();
+            services.AddSingleton<IAgentDAL, EfAgentRepository>();
         }
 
         

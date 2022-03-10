@@ -3,16 +3,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DataAccessLayer.Abstract
 {
     public interface IGenericEntityDAL<T> where T:class,IEntity,new() 
     {
-        List<T> GetAllItems();
+        Task<List<T>> GetAllItems();
         //List<T> GetItemsByFilter(Expression<Func<T, bool>> filter);
-        T GetItemById(int id);
-        T InsertItem(T item);
-        T UpdateItem(T item);
-        void DeleteItem(int id);
+        Task<T> GetItemById(int id);
+        Task<T> InsertItem(T item);
+        Task<T> UpdateItem(T item);
+        Task DeleteItem(int id);
     }
 }

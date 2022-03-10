@@ -27,9 +27,9 @@ namespace AgentService.API.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            return Ok(manageAgent.GetAllElement()); // 200 + retrieved data 
+            return Ok(await manageAgent.GetAllElement()); // 200 + retrieved data 
         }
         
         /// <summary>
@@ -39,11 +39,11 @@ namespace AgentService.API.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("[action]/{id}")]
-        public IActionResult GetAgentById(int id)
+        public async Task<IActionResult> GetAgentById(int id)
         {
-            if (manageAgent.GetElementById(id)!=null)
+            if (await manageAgent.GetElementById(id)!=null)
             {
-                return Ok(manageAgent.GetElementById(id)); // 200 + retrieved data
+                return Ok(await manageAgent.GetElementById(id)); // 200 + retrieved data
             }
             return NotFound(); // 404
         }
@@ -54,11 +54,11 @@ namespace AgentService.API.Controllers
         /// <param name="agent"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult Post([FromBody]Agent agent)
+        public async Task<IActionResult> Post([FromBody]Agent agent)
         {
             if (ModelState.IsValid)
             {
-                var newAgent = manageAgent.InsertElement(agent);
+                var newAgent = await manageAgent.InsertElement(agent);
                 return CreatedAtAction("Get", new { agentId = newAgent.AgentId }, newAgent); // 201 + data + header info for data location
             }
             return BadRequest(ModelState); // 400 + validation errors
@@ -70,11 +70,11 @@ namespace AgentService.API.Controllers
         /// <param name="oldAgent"></param>
         /// <returns></returns>
         [HttpPut]
-        public IActionResult Put([FromBody]Agent oldAgent)
+        public async Task<IActionResult> Put([FromBody]Agent oldAgent)
         {
-            if (manageAgent.GetElementById(oldAgent.AgentId)!=null)
+            if (await manageAgent.GetElementById(oldAgent.AgentId)!=null)
             {
-                return Ok(manageAgent.UpdateElement(oldAgent)); // 200 + data
+                return Ok(await manageAgent.UpdateElement(oldAgent)); // 200 + data
             }
             return NotFound(); // 404 
         }
@@ -86,11 +86,11 @@ namespace AgentService.API.Controllers
         /// <returns></returns>
         [HttpDelete]
         [Route("[action]/{id}")]
-        public IActionResult DeleteAgentById(int id)
+        public async Task<IActionResult> DeleteAgentById(int id)
         {
-            if (manageAgent.GetElementById(id) != null)
+            if (await manageAgent.GetElementById(id) != null)
             {
-                manageAgent.DeleteElement(id);
+                await manageAgent.DeleteElement(id);
                 return Ok(); // 200
             }
             return NotFound(); // 404 

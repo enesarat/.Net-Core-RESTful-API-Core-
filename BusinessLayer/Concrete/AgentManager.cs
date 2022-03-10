@@ -4,6 +4,7 @@ using EntityLayer;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
@@ -14,32 +15,32 @@ namespace BusinessLayer.Concrete
         {
             this.agentAccess = agentAccess;
         }
-        public void DeleteElement(int id)
+        public async Task DeleteElement(int id)
         {
-            agentAccess.DeleteItem(id);
+            await agentAccess.DeleteItem(id);
         }
 
-        public List<Agent> GetAllElement()
+        public async Task<List<Agent>> GetAllElement()
         {
-            var agentList = agentAccess.GetAllItems();
+            var agentList = await agentAccess.GetAllItems();
             return agentList;
         }
 
-        public Agent GetElementById(int id)
+        public async Task<Agent> GetElementById(int id)
         {
-            var agent = agentAccess.GetItemById(id);
+            var agent = await agentAccess.GetItemById(id);
             return agent;
         }
 
-        public Agent InsertElement(Agent item)
+        public async Task<Agent> InsertElement(Agent item)
         {
-            agentAccess.InsertItem(item);
+            await agentAccess .InsertItem(item);
             return item;
         }
 
-        public Agent UpdateElement(Agent item)
+        public async Task<Agent> UpdateElement(Agent item)
         {
-            agentAccess.UpdateItem(item);
+            await agentAccess .UpdateItem(item);
             return item;
         }
     }

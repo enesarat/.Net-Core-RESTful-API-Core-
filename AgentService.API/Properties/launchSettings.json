@@ -2,9 +2,13 @@
   "iisSettings": {
     "windowsAuthentication": true,
     "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/AgentService.API",
+      "sslPort": 0
+    },
     "iisExpress": {
       "applicationUrl": "http://localhost:5000",
-      "sslPort": 0
+      "sslPort": 44369
     }
   },
   "profiles": {

@@ -1,4 +1,5 @@
 ﻿using EntityLayer;
+using EntityLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -13,5 +14,6 @@ namespace DataAccessLayer
         }
 
         public DbSet<Agent> Agents{ get; set; }
+        public DbSet<User> Users{ get; set; }
     }
 }

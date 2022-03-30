@@ -101,3 +101,4 @@ C:\Users\enes.arat\source\repos\AgentService\AgentService.API\bin\Debug\netcorea
 C:\Users\enes.arat\source\repos\AgentService\AgentService.API\bin\Debug\netcoreapp3.1\YamlDotNet.dll
 C:\Users\enes.arat\source\repos\AgentService\AgentService.API\obj\Debug\netcoreapp3.1\AgentService.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\enes.arat\source\repos\AgentService\AgentService.API\bin\Debug\netcoreapp3.1\AgentService.API.xml
+C:\Users\enes.arat\source\repos\AgentService\AgentService.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

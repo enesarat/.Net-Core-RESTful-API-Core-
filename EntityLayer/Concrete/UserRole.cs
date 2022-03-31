@@ -7,20 +7,14 @@ using System.Text;
 
 namespace EntityLayer.Concrete
 {
-    public class User:IEntity
+    public class UserRole : IEntity
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int UserId { get; set; }
+        public int RoleId { get; set; }
         [StringLength(25)]
         [Required]
-        public string UserName { get; set; }
-        [StringLength(15)]
-        [Required]
-        public string Password { get; set; }
+        public string RoleName { get; set; }
+        public List<User> Users { get; set; }
 
-        public string TokenKey { get; set; }
-
-        public int RoleId { get; set; }
-        public UserRole UserRole { get; set; }
     }
 }

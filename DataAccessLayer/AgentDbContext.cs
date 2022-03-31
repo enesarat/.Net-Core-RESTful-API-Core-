@@ -15,5 +15,7 @@ namespace DataAccessLayer
 
         public DbSet<Agent> Agents{ get; set; }
         public DbSet<User> Users{ get; set; }
+        public DbSet<UserRole> UserRoles { get; set; }
+
     }
 }

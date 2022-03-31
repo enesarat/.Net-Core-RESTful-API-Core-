@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class UserManger : IUserService
+    public class UserManager : IUserService
     {
         IUserDAL userAccess;
 
-        public UserManger(IUserDAL userAccess)
+        public UserManager(IUserDAL userAccess)
         {
             this.userAccess = userAccess;
         }
@@ -33,6 +33,11 @@ namespace BusinessLayer.Concrete
         {
             var user = await userAccess.GetItemById(id);
             return user;
+        }
+
+        public List<User> GetUserListWithRole()
+        {
+            return userAccess.GetListWithRoles();
         }
 
         public async Task<User> InsertElement(User item)

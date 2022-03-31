@@ -5,8 +5,7 @@ using System.Text;
 
 namespace BusinessLayer.Abstract
 {
-    public interface IUserService : IGenericService<User>
+    public interface IUserRoleService : IGenericService<UserRole>
     {
-        List<User> GetUserListWithRole();
     }
 }

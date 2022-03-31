@@ -5,8 +5,7 @@ using System.Text;
 
 namespace DataAccessLayer.Abstract
 {
-    public interface IUserDAL:IGenericEntityDAL<User>
+    public interface IUserRoleDAL : IGenericEntityDAL<UserRole>
     {
-        List<User> GetListWithRoles();
     }
 }

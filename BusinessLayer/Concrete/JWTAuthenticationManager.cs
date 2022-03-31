@@ -15,28 +15,37 @@ namespace BusinessLayer.Concrete
 {
     public class JWTAuthenticationManager : IJWTAuthenticationService
     {
-        private UserManger manageUser = new UserManger(new EfUserRepository());
+        private UserManager manageUser = new UserManager(new EfUserRepository());
+        private UserRoleManager manageUserRole = new UserRoleManager(new EfUserRoleRepository());
+
         private readonly string token;
         private List<User> userList;
-        public JWTAuthenticationManager(/*IUserService manageUser,*/string token)
+        public JWTAuthenticationManager(string token)
         {
-            //this.manageUser = manageUser;
             this.token = token;
             getUserList();
         }
-
 
         
         public async void getUserList()
         {
             this.userList = await manageUser.GetAllElement();
         }
-
+        public async Task<string> GetUserRole(int id)
+        {
+            var role = await manageUserRole.GetElementById(id);
+            return role.RoleName;
+        }
 
         public User Authenticate(UserLogin userLogin) // Check the user on database to authenticate.
         {
             getUserList();
             var currentUser = userList.Find(x => x.UserName == userLogin.UserName && x.Password == userLogin.Password);
+            var currentUserDTO = new UserLogin();
+            currentUserDTO.UserId = currentUser.UserId;
+            currentUserDTO.UserName = currentUser.UserName;
+            currentUserDTO.Role = GetUserRole(currentUser.RoleId).Result;
+            currentUserDTO.Token = currentUser.TokenKey;
 
             if (currentUser==null)
             {
@@ -49,7 +58,9 @@ namespace BusinessLayer.Concrete
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                    new Claim(ClaimTypes.Name, currentUser.UserId.ToString())
+                    new Claim(ClaimTypes.Name, currentUserDTO.UserId.ToString()),
+                    new Claim(ClaimTypes.NameIdentifier, currentUserDTO.UserName),
+                    new Claim(ClaimTypes.Role, currentUserDTO.Role),
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)

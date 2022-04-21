@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DeNyFYLcKsxKVtYkz/B/rp4tW1VhIFsuYxmOQhxNkldJWucrO6ckQMurHeC+Bm52A9nN1XmGZyIn4CHVrbSRww==",
+  "dgSpecHash": "O3jdf28xtjpr6MzDRVG1PCDAVbw3Xg42Lpp0+RLLBo27bO+AymNBhyFHur77zUdckrTQ3+Qku6hhWda8DBOm2w==",
   "success": true,
   "projectFilePath": "C:\\Users\\enes.arat\\source\\repos\\AgentService\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
@@ -32,6 +32,7 @@
     "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\enes.arat\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",

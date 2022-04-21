@@ -41,36 +41,39 @@ namespace BusinessLayer.Concrete
         {
             getUserList();
             var currentUser = userList.Find(x => x.UserName == userLogin.UserName && x.Password == userLogin.Password);
-            var currentUserDTO = new UserLogin();
-            currentUserDTO.UserId = currentUser.UserId;
-            currentUserDTO.UserName = currentUser.UserName;
-            currentUserDTO.Role = GetUserRole(currentUser.RoleId).Result;
-            currentUserDTO.Token = currentUser.TokenKey;
-
-            if (currentUser==null)
+            if (currentUser == null)
             {
                 return null;
             }
+            else { 
+                var currentUserDTO = new UserLogin();
+                currentUserDTO.UserId = currentUser.UserId;
+                currentUserDTO.UserName = currentUser.UserName;
+                currentUserDTO.Role = GetUserRole(currentUser.RoleId).Result;
+                currentUserDTO.Token = currentUser.TokenKey;
 
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(this.token);  // If the Authentication is successful, the JWT token is generated.
-            var tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(new Claim[]
+            
+
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var key = Encoding.ASCII.GetBytes(this.token);  // If the Authentication is successful, the JWT token is generated.
+                var tokenDescriptor = new SecurityTokenDescriptor
                 {
-                    new Claim(ClaimTypes.Name, currentUserDTO.UserId.ToString()),
-                    new Claim(ClaimTypes.NameIdentifier, currentUserDTO.UserName),
-                    new Claim(ClaimTypes.Role, currentUserDTO.Role),
-                }),
-                Expires = DateTime.UtcNow.AddDays(7),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-            };
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            currentUser.TokenKey = tokenHandler.WriteToken(token);
-            manageUser.UpdateElement(currentUser); // Set token to user data
-            currentUser.Password = null;
+                    Subject = new ClaimsIdentity(new Claim[]
+                    {
+                        new Claim(ClaimTypes.Name, currentUserDTO.UserId.ToString()),
+                        new Claim(ClaimTypes.NameIdentifier, currentUserDTO.UserName),
+                        new Claim(ClaimTypes.Role, currentUserDTO.Role),
+                    }),
+                    Expires = DateTime.UtcNow.AddMinutes(1),
+                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+                };
+                var token = tokenHandler.CreateToken(tokenDescriptor);
+                currentUser.TokenKey = tokenHandler.WriteToken(token);
+                manageUser.UpdateElement(currentUser); // Set token to user data
+                currentUser.Password = null;
 
-            return currentUser;
+                return currentUser;
+            }
         }
 
 

@@ -19,15 +19,17 @@ namespace AgentService.API.Controllers
     public class UserController : ControllerBase
     {
         private readonly IJWTAuthenticationService authenticateManager;
+        private readonly IRsaHelperService _rsaManager;
 
-        public UserController(IJWTAuthenticationService authenticateManager)
+        public UserController(IJWTAuthenticationService authenticateManager, IRsaHelperService rsaManager)
         {
             this.authenticateManager = authenticateManager;
+            this._rsaManager = rsaManager;
         }
 
         [AllowAnonymous]
-        [HttpPost("authenticate")]
-        public IActionResult Login([FromBody] UserLogin userCredentials)
+        [HttpPost("authenticateTest")]
+        public IActionResult LoginTest([FromBody] UserLogin userCredentials)
         {
             var loginUser = authenticateManager.Authenticate(userCredentials);
 
@@ -39,16 +41,37 @@ namespace AgentService.API.Controllers
             return NotFound("User not found!");
         }
 
+
+        //***********************************************************
+        [AllowAnonymous]
+        [HttpPost("authenticate")]
+        public IActionResult Login([FromBody] UserLogin userCredentials)
+        {
+            var clearTextPassword = _rsaManager.Decrypt(userCredentials.Password);
+            userCredentials.Password = clearTextPassword;
+            var loginUser = authenticateManager.Authenticate(userCredentials);
+
+            if (loginUser != null)
+            {
+                return Ok(loginUser.TokenKey);
+
+            }
+            return NotFound("User not found!");
+        }
+        //************************************************************
+
+
         [HttpGet("Admin")]
         [Authorize(Roles = "Administrator")]
         public IActionResult AdminsEndpoit()
         {
             var currentUser = GetCurrentUser();
             return Ok($"Successful! You've Authenticated. Welcome {currentUser.Role}" +$" {currentUser.UserName}");
+            //return RedirectToAction("Get", "Agent");
         }
 
         [HttpGet("Manager")]
-        [Authorize(Roles = "Manager")]
+        [Authorize(Roles = "Manager,Administrator")]
         public IActionResult ManagerEndpoint()
         {
             var currentUser = GetCurrentUser();
@@ -56,7 +79,7 @@ namespace AgentService.API.Controllers
         }
 
         [HttpGet("Expert")]
-        [Authorize(Roles = "Expert")]
+        [Authorize(Roles = "Expert,Administrator")]
         public IActionResult ExpertEndpoint()
         {
             var currentUser = GetCurrentUser();

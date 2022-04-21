@@ -44,10 +44,10 @@ namespace AgentService.API
             services.AddMvc();
             services.AddControllers();
             services.AddSingleton<IAgentService, AgentManager>();
+            services.AddSingleton<IRsaHelperService, RsaHelperManager>();
             services.AddSingleton<IAgentDAL, EfAgentRepository>();
             //services.AddSingleton<IUserService, UserManger>();
 
-            ///****** dependency injection ile ilgili sorun var ********//
 
             // JWT authentication adjustments
             var tokenKey = Configuration.GetValue<string>("TokenKey");
@@ -66,7 +66,8 @@ namespace AgentService.API
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = false,
-                    ValidateAudience = false
+                    ValidateAudience = false,
+                    ValidateLifetime = true
                 };
             });
             services.AddSingleton<IJWTAuthenticationService>(new JWTAuthenticationManager(tokenKey)); // for dependency injection

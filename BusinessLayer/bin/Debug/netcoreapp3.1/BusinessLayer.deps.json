@@ -9,7 +9,8 @@
       "BusinessLayer/1.0.0": {
         "dependencies": {
           "DataAccessLayer": "1.0.0",
-          "EntityLayer": "1.0.0"
+          "EntityLayer": "1.0.0",
+          "Portable.BouncyCastle": "1.9.0"
         },
         "runtime": {
           "BusinessLayer.dll": {}
@@ -381,6 +382,14 @@
           "lib/netstandard1.3/Newtonsoft.Json.dll": {
             "assemblyVersion": "10.0.0.0",
             "fileVersion": "10.0.1.20720"
+          }
+        }
+      },
+      "Portable.BouncyCastle/1.9.0": {
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+            "assemblyVersion": "1.9.0.0",
+            "fileVersion": "1.9.0.1"
           }
         }
       },
@@ -1272,6 +1281,13 @@
       "sha512": "sha512-ebWzW9j2nwxQeBo59As2TYn7nYr9BHicqqCwHOD1Vdo+50HBtLPuqdiCYJcLdTRknpYis/DSEOQz5KmZxwrIAg==",
       "path": "newtonsoft.json/10.0.1",
       "hashPath": "newtonsoft.json.10.0.1.nupkg.sha512"
+    },
+    "Portable.BouncyCastle/1.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eZZBCABzVOek+id9Xy04HhmgykF0wZg9wpByzrWN7q8qEI0Qen9b7tfd7w8VA3dOeesumMG7C5ZPy0jk7PSRHw==",
+      "path": "portable.bouncycastle/1.9.0",
+      "hashPath": "portable.bouncycastle.1.9.0.nupkg.sha512"
     },
     "runtime.native.System/4.3.0": {
       "type": "package",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Y0gtQ4Kgq2nv8gZrikJcsgzy5fj9xlEB0gLDUyJ0n/I5fBpevfj7mKPDjkFl4ldUCPDaT6mT8CyyKPndrLA2aQ==",
+  "dgSpecHash": "05FU/OkoZhb2WQk6fL+9PXP/sBTH5pk7FhjjhjaacE4bfmamCsDZ5B9w04dhOcpYbYAC3nDrPZfDyr8rm5l2/g==",
   "success": true,
   "projectFilePath": "C:\\Users\\enes.arat\\source\\repos\\AgentService\\AgentService.API\\AgentService.API.csproj",
   "expectedPackageFiles": [
@@ -64,6 +64,7 @@
     "C:\\Users\\enes.arat\\.nuget\\packages\\nswag.core.yaml\\13.15.10\\nswag.core.yaml.13.15.10.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\nswag.generation\\13.15.10\\nswag.generation.13.15.10.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\nswag.generation.aspnetcore\\13.15.10\\nswag.generation.aspnetcore.13.15.10.nupkg.sha512",
+    "C:\\Users\\enes.arat\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

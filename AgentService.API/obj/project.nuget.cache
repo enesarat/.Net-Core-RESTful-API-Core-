@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "05FU/OkoZhb2WQk6fL+9PXP/sBTH5pk7FhjjhjaacE4bfmamCsDZ5B9w04dhOcpYbYAC3nDrPZfDyr8rm5l2/g==",
+  "dgSpecHash": "UHcmrCZKfwokeaNkGL0FkYcNUxU+wM+Dd2Z1YqUiTy7zmvsQ2EDvWwTgAeBEAkUGxiLYaECN/eDjA48Bw72jYA==",
   "success": true,
   "projectFilePath": "C:\\Users\\enes.arat\\source\\repos\\AgentService\\AgentService.API\\AgentService.API.csproj",
   "expectedPackageFiles": [
@@ -135,7 +135,8 @@
     "C:\\Users\\enes.arat\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\enes.arat\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\enes.arat\\.nuget\\packages\\yamldotnet\\11.2.1\\yamldotnet.11.2.1.nupkg.sha512"
+    "C:\\Users\\enes.arat\\.nuget\\packages\\yamldotnet\\11.2.1\\yamldotnet.11.2.1.nupkg.sha512",
+    "C:\\Users\\enes.arat\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
   ],
   "logs": []
 }
